@@ -1,19 +1,25 @@
 .btn{
+    &,
     &:link, 
     &:visited {
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    position: relative;
-    font-size: 1.6rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+        font-size: 1.6rem;
+
+        //change for <button> element
+
+        border: none;
+        cursor: pointer;
     }
 
     &:hover{
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
         &::after{
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
@@ -34,6 +40,8 @@
                 background-color: $color-white;
             }
     } 
+
+    &--green,
     &--green:link, 
     &--green:visited{
         background-color: $color-primary;
@@ -82,7 +90,8 @@
         transform: translateY(-2px);
     }
 
-    &:active{
+    &:active, &:focus{
+        outline: none;
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(0);
     }
